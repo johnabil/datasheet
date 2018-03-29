@@ -20,7 +20,29 @@ Route::get('/add_person_form', [
     'as' => 'personView'
 ]);
 
+Route::get('/odas', [
+    'uses' => 'MainController@addOdasView',
+    'as' => 'odasView'
+]);
+
+Route::get('/others', [
+    'uses' => 'MainController@addOthersView',
+    'as' => 'othersView'
+]);
+
+Route::get('/perview_sheet', [
+    'uses' => 'MainController@perviewSheet',
+    'as' => 'perviewSheet'
+]);
+
 Route::post('/add_person', [
-    'uses' => 'MainController@addPerson',
-    'as' => 'person'
+    'uses' => 'MainController@addPerson'
+]);
+
+Route::post('/add_points', [
+    'uses' => 'MainController@addPoints'
+]);
+
+Route::post('/add_other_points', [
+    'uses' => 'MainController@addOtherPoints'
 ]);
