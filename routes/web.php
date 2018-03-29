@@ -20,7 +20,7 @@ Route::get('/add_person_form', [
     'as' => 'personView'
 ]);
 
-Route::get('/add_person', [
+Route::post('/add_person', [
     'uses' => 'MainController@addPerson',
     'as' => 'person'
 ]);

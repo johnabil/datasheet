@@ -1,4 +1,4 @@
-@extends('odas')
+@extends('welcome')
 @section('content')
 
 

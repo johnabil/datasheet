@@ -1,13 +1,16 @@
-@extends('odas')
+@extends('welcome')
 @section('content')
 
-    <div style="max-width: 500px;margin: auto;">
+    <br><br><br><br><br><br>
+    <div style="max-width: 500px;margin: auto; background-color: lightblue; border-style: solid;">
 
-        {{ Form::open(array('url' => '/add_person_form', 'method' => 'post')) }}
+        {!! Form::open(['url' => '/add_person', 'method' => 'POST', 'class' => 'form-horizontal', 'style' => 'margin:40px;']) !!}
 
-        echo Form::text('username');
+        {!! Form::label('personlbl','Name') !!}
+        {!! Form::text('name','',['class' => 'form-control']) !!}<br>
+        {!! Form::submit('Add Name',['class' => 'btn btn-success', 'style' => 'margin-left:32px;']) !!}
 
-        {{ Form::close() }}
+        {!! Form::close() !!}
     </div>
 
 @endsection
